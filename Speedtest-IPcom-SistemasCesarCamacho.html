@@ -312,9 +312,73 @@ function initUI(){
 		 <div id="ipArea">Información de IP:<span id="ip"></span>
 			</div>
 		<div>
-      Fecha y hora: <span id="date">
-      <!-- #BeginDate format:Am1a -->Marzo 10, 2021 4:13 PM<!-- #EndDate -->
-      </span>
+      Fecha y hora:<p id="hora">Aqu&iacute; ir&aacute; la hora</p>
+<script type="text/javascript">
+// Formato de fecha con día de la semana, nombre de mes,
+// mañana, tarde, noche y ahora también la hora.
+// Script Realizado por Oscar Javier García Baudet (a.k.a. RedStar)
+// ***@yahoo.es) para www.canal-linares.com
+
+var nmes = new Array("Enero", "Febrero", "Marzo", "Abril", "Mayo",
+"Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre",
+"Diciembre");
+var ndia = new Array("Domingo", "Lunes", "Martes", "Mi&eacute;rcoles",
+"Jueves", "Viernes", "S&aacute;bado");
+
+function ActualizarHora() {
+var fecha = new Date();
+salida = window.setTimeout("ActualizarHora()", 1000);
+var today = new Date();
+anio = fecha.getYear();
+if (anio < 1900) anio = anio + 1900;
+mes = nmes[fecha.getMonth()];
+dias = ndia[fecha.getDay()];
+dia = fecha.getDate();
+hora = fecha.getHours();
+if (hora < 10) hora = "0" + hora;
+minutos = fecha.getMinutes();
+if (minutos < 10) minutos = "0" + minutos;
+segundos = fecha.getSeconds();
+if (segundos < 10) segundos = "0" + segundos;
+switch(fecha.getMonth()) {
+case 0:
+case 1:
+case 2:
+case 3:
+case 4:
+hora1 = 7;
+hora2 = 12;
+hora3 = 20;
+break;
+case 5:
+case 6:
+case 7:
+case 8:
+case 9:
+hora1 = 6;
+hora2 = 12;
+hora3 = 22;
+break;
+case 10:
+case 11:
+case 12:
+hora1 = 7;
+hora2 = 12;
+hora3 = 20;
+break;
+}
+if ((hora > hora1) && (hora < hora3) )
+if (hora < hora2)
+saludo = "Buenos d&iacute;as";
+else saludo = "Buenas tardes";
+else saludo = "Buenas noches";
+var obj = document.getElementById("hora");
+obj.innerHTML = saludo + ", hoy es " + dias + " d&iacute;a " +
+dia + " de " + mes + " de " + anio + ": " + hora + ":" + minutos + ":"
++ segundos;
+}
+ActualizarHora();
+</script>
 			</div>
 		</div>
 		<div id="shareArea" style="display:none">
