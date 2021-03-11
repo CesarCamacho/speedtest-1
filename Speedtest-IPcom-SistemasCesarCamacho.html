@@ -273,8 +273,9 @@ function initUI(){
 		}
 	}
 </style>
-<title>LibreSpeed Example</title>
+<title>BTest IPcom Sistemas</title>
 </head>
+	<script language="JavaScript" src="fecha.js" type="text/javascript"></script>
 <body>
 <img src="https://github.com/CesarCamacho/speedtest-1/blob/master/.logo/IPcom%20Sistemas%20S.A.S%20Logo%20Redes%20IPcom.png?raw=true" width="300" height="150" alt=""/>
 <h1>Test de Velocidad</h1>
@@ -311,14 +312,8 @@ function initUI(){
 		<div id="ipArea">
 		 <div id="ipArea">Información de IP:<span id="ip"></span>
 			</div>
-		<div>
-        <p id="hora">hoy es Jueves d&iacute;a 11 de Marzo de 2021: 07:32:45</p>
-        <script type="text/javascript">
-// Formato de fecha con día de la semana, nombre de mes,
-// mañana, tarde, noche y ahora también la hora.
-// Script Realizado por Oscar Javier García Baudet (a.k.a. RedStar)
-// ***@yahoo.es) para www.canal-linares.com
-
+		<div> <p id="hora">Aqu&iacute; ir&aacute; la hora</p>
+<script type="text/javascript">
 var nmes = new Array("Enero", "Febrero", "Marzo", "Abril", "Mayo",
 "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre",
 "Diciembre");
@@ -369,16 +364,16 @@ break;
 }
 if ((hora > hora1) && (hora < hora3) )
 if (hora < hora2)
-else saludo = "";
-else saludo = "";
-else saludo = "";
+saludo = "Buenos d&iacute;as";
+else saludo = "Buenas tardes";
+else saludo = "Buenas noches";
 var obj = document.getElementById("hora");
-obj.innerHTML = saludo + ", hoy es " + dias + " d&iacute;a " +
+obj.innerHTML =  " hoy es " + dias + " d&iacute;a " +
 dia + " de " + mes + " de " + anio + ": " + hora + ":" + minutos + ":"
 + segundos;
 }
 ActualizarHora();
-</script>
+</script>   
 			</div>
 		</div>
 		<div id="shareArea" style="display:none">
