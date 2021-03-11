@@ -312,8 +312,8 @@ function initUI(){
 		 <div id="ipArea">Información de IP:<span id="ip"></span>
 			</div>
 		<div>
-      Fecha y hora:<p id="hora">Aqu&iacute; ir&aacute; la hora</p>
-<script type="text/javascript">
+        <p id="hora">hoy es Jueves d&iacute;a 11 de Marzo de 2021: 07:32:45</p>
+        <script type="text/javascript">
 // Formato de fecha con día de la semana, nombre de mes,
 // mañana, tarde, noche y ahora también la hora.
 // Script Realizado por Oscar Javier García Baudet (a.k.a. RedStar)
@@ -369,9 +369,9 @@ break;
 }
 if ((hora > hora1) && (hora < hora3) )
 if (hora < hora2)
-saludo = "Buenos d&iacute;as";
-else saludo = "Buenas tardes";
-else saludo = "Buenas noches";
+else saludo = "";
+else saludo = "";
+else saludo = "";
 var obj = document.getElementById("hora");
 obj.innerHTML = saludo + ", hoy es " + dias + " d&iacute;a " +
 dia + " de " + mes + " de " + anio + ": " + hora + ":" + minutos + ":"
